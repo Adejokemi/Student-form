@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        padding: 10px;
+        color: #333;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 5px 30px;
+        background-color: #fdf2c3;
+    }
+    .all{
+        border: 1px solid #555;
+        padding: 0;
+        margin: 0;
+    }
+    </style>
+    <title>Preview Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="all">
+    <h1>Preview</h1>
+
+    <h2>Student Information</h2>
+    <p>First Name: <span id="preview-first-name"></span></p>
+    <p>Middle Name: <span id="preview-middle-name"></span></p>
+    <p>Last Name: <span id="preview-last-name"></span></p>
+    <p>Date of Birth: <span id="preview-date-of-birth"></span></p>
+    <p>Student ID: <span id="preview-student-id"></span></p>
+
+    <h2>Address</h2>
+    <p>Street: <span id="preview-street"></span></p>
+    <p>City: <span id="preview-city"></span></p>
+    <p>State/Province: <span id="preview-state"></span></p>
+    <p>County: <span id="preview-county"></span></p>
+    <p>Zip Code: <span id="preview-zip"></span></p>
+
+    <h2>Contact Information</h2>
+    <p>Email: <span id="preview-email"></span></p>
+
+    <h2>Courses</h2>
+    <p>Course: <span id="preview-course"></span></p>
+    <p>Level: <span id="preview-level"></span></p>
+    <p>Language: <span id="preview-language"></span></p>
+    <p>Start Date: <span id="preview-start-date"></span></p>
+    <p>Input Field: <span id="preview-input-field"></span></p>
+    <p>Comment: <span id="preview-comment"></span></p>
+    </div>
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+
+
+        const firstName = urlParams.get('first-name');
+        const middleName = urlParams.get('middle-name');
+        const lastName = urlParams.get('last-name');
+        const dateOfBirth = urlParams.get('date');
+        const studentId = urlParams.get('studentId');
+        const street = urlParams.get('street');
+        const city = urlParams.get('city');
+        const state = urlParams.get('state');
+        const county = urlParams.get('county');
+        const zip = urlParams.get('zip');
+        const email = urlParams.get('email');
+        const course = urlParams.get('course');
+        const level = urlParams.get('level');
+        const language = urlParams.get('language');
+        const startDate = urlParams.get('start-date');
+        const inputField = urlParams.get('inputField');
+        const comment = urlParams.get('comment');
+
+        
+        document.getElementById('preview-first-name').textContent = firstName;
+        document.getElementById('preview-middle-name').textContent = middleName;
+        document.getElementById('preview-last-name').textContent = lastName;
+        document.getElementById('preview-date-of-birth').textContent = dateOfBirth;
+        document.getElementById('preview-student-id').textContent = studentId;
+        document.getElementById('preview-street').textContent = street;
+        document.getElementById('preview-city').textContent = city;
+        document.getElementById('preview-state').textContent = state;
+        document.getElementById('preview-county').textContent = county;
+        document.getElementById('preview-zip').textContent = zip;
+        document.getElementById('preview-email').textContent = email;
+        document.getElementById('preview-course').textContent = course;
+        document.getElementById('preview-level').textContent = level;
+        document.getElementById('preview-language').textContent = language;
+        document.getElementById('preview-start-date').textContent = startDate;
+        document.getElementById('preview-input-field').textContent = inputField;
+        document.getElementById('preview-comment').textContent = comment;
+    </script>
+    </div>
+</body>
+</html>
